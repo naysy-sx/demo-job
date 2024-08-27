@@ -1,0 +1,400 @@
+
+/* Общие стили */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    display: revert;
+}
+
+/* Сброс отступов и полей */
+*,
+*::before,
+*::after,
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Сброс стилей для заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+}
+
+/* Сброс стилей для списков */
+ul {
+    list-style: none;
+}
+
+ol,
+ul,
+menu,
+summary {
+    list-style: none;
+}
+
+/* Сброс стилей для таблиц */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+/* Сброс стилей для элементов форм */
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font: inherit;
+}
+
+/* Общие стили для изображений и видео */
+img,
+video {
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* Общие стили для ссылок и кнопок */
+a,
+button {
+    cursor: pointer;
+}
+
+/* Стили для элемента pre */
+:where(pre) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* Сброс стилей для placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* Сброс стилей для скрытых элементов */
+:where([hidden]) {
+    display: none;
+}
+
+/* Стили для contenteditable */
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* Стили для перетаскивания */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/* Сброс стилей для модальных окон */
+:where(dialog:modal) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* Сброс стилей для элемента details */
+::-webkit-details-marker {
+    display: none;
+}
+
+/* Другие общие стили */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    color-scheme: dark light;
+    hanging-punctuation: first last;
+}
+
+body {
+    min-height: 100svh;
+}
+
+p,
+li{
+    max-width: 65ch;
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+}
+
+:where(p + p) {
+    margin-top: 1rem;
+}
+
+a {
+    background-color: transparent;
+}
+
+abbr[title] {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    line-height: inherit;
+    border: 1px solid currentColor;
+}
+
+button {
+    overflow: visible;
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    padding: 1px 6px;
+}
+
+input {
+    overflow: visible;
+}
+
+input,
+textarea {
+    padding: 1px;
+}
+
+fieldset {
+    border: 1px solid currentColor;
+    margin: 0 2px;
+}
+
+legend {
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    white-space: normal;
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+select {
+    text-transform: none;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    white-space: revert;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="color"] {
+    background: inherit;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto;
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.5;
+}
+
+::-webkit-file-upload-button,
+::-webkit-search-decoration {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    color: inherit;
+    overflow: visible;
+}
+
+dl,
+ol,
+ul {
+    margin: 1em 0;
+}
+
+ol ol,
+ol ul,
+ol dl,
+ul ol,
+ul ul,
+ul dl,
+dl ol,
+dl ul,
+dl dl {
+    margin: 0;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+audio,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+img{
+    border: 0;
+    max-width: 100%;
+    max-inline-size: 100%;
+    max-block-size: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+table {
+    text-indent: 0;
+    border-color: inherit;
+}
+
+details {
+    display: block;
+}
+
+dialog {
+    background-color: inherit;
+    border: solid;
+    color: inherit;
+    display: block;
+    height: fit-content;
+    left: 0;
+    margin: auto;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    width: fit-content;
+}
+
+dialog:not([open]) {
+    display: none;
+}
+
+summary {
+    display: list-item;
+}
+
+canvas {
+    display: inline-block;
+}
+
+template {
+    display: none;
+}
+
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}

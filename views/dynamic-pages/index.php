@@ -1,0 +1,1 @@
+<?php echo $current_material['content'];
